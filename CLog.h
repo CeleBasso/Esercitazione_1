@@ -1,11 +1,12 @@
-/*! @file CPower.h
-	@brief A class for power functions 
+/*! @file CLog.h
+	@brief A class for log functions 
 	@author Basso/Odino
 
 	Details.
 */ 
-#ifndef CPOWER_H
-#define CPOWER_H
+
+#ifndef CLOG_H
+#define CLOG_H
 
 #include <iostream>
 #include <cmath>
@@ -14,32 +15,32 @@
 
 using namespace std;
 
-class Power : public Function  
+class Log : public Function  
 {
     private:
 
     double k_coeff;
-    double e_coeff;
+    double b_coeff;
 
     /// @name CONSTRUCTOR e DESTRUCTOR
     /// @{
     public:
-    Power();
-    Power(double k_coeff, double e_coeff);
-    Power(const Power& p);
-    ~Power();
+    Log();
+    Log(double k_coeff, double b_coeff);
+    Log(const Log& l);
+    ~Log();
     /// @}
     
     /// @name GETTER E SETTER
     /// @{
     double GetValue(double in) const;
-    void SetPower(double k, double e);
+    void SetLog(double k, double b);
     ///}@
 
     ///@name OPERATOR
     /// @{
-    Power& operator=(const Power& p);
-	bool operator==(const Power& p);
+    Log& operator=(const Log& l);
+	bool operator==(const Log& l);
     ///@}
 
     /// @name DEBUG
@@ -49,6 +50,4 @@ class Power : public Function
 };
 
 #endif
-
-
 
