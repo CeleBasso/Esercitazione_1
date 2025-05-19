@@ -38,7 +38,7 @@ public:
 
 
 	void SetPolynomial(const double* coefficients, int size);
-    double GetValue(double in);
+    double GetValue(double in) const;
 	
 	void Reset();
 

@@ -121,7 +121,7 @@ void Polynomial::SetPolynomial(const double* coefficients, int size) {
 /// @brief returns the value of the function, given an input 
 ///	@param in the input
 ///	@return the value of the function
-double Polynomial::GetValue(double in) {
+double Polynomial::GetValue(double in) const {
         
 		int i;
 		double x = in;
@@ -130,7 +130,7 @@ double Polynomial::GetValue(double in) {
 		result = coeff[0];
 		for (i=1; i<=degree; i++) {
 			result += coeff[i]*x;
-			x = in;			/ x^i */
+			x = in;			/*x^i */ 
 		}
         
 		return result;
