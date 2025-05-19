@@ -27,7 +27,7 @@ public:
 
 	/// @name GETTERS
 	/// @{
-	virtual double GetValue(double in)const =0;
+	virtual double GetValue(double in) const =0;
 	/// @}
 
 	/// @name DEBUG 
